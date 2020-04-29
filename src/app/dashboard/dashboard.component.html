@@ -1,0 +1,28 @@
+<div class="notification">
+  <div class="mauto">
+  <div class="columns is-multiline">
+    <div *ngFor="let item of newsService.newsArticles">
+      <div class="column">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-4by3">
+            <img [src]="item.urlToImage" alt="Placeholder image">
+          </figure>
+        </div>
+        <header class="card-header">	
+              <p class="card-header-title">
+                {{item.title}}
+              </p>
+        </header>
+      
+        
+          <footer class="card-footer">
+          <a [href]="item.newsUrl" target="_blank" class="card-footer-item">Read More &nbsp;<i class="fas fa-arrow-right"></i></a>
+          </footer>
+      </div>
+      <hr/>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
