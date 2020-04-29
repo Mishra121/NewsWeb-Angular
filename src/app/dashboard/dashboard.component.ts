@@ -12,7 +12,7 @@ export class DashboardComponent implements OnInit {
   articles: any;
   temp: NewsModel = new NewsModel;
 
-  constructor(private newsService: NewsService) { }
+  constructor(public newsService: NewsService) { }
 
   ngOnInit() {
     this.FetchHeadlines();
