@@ -1,0 +1,36 @@
+<nav class="navbar is-primary is-fixed-top" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">	
+    <a class="navbar-item" href="#" (click)="FetchHeadlines()" >
+      NewsWeb
+    </a>
+    <a (click)="toggleNavbar()" role="button" #navBurger  class="navbar-burger burger " aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" #navMenu class="navbar-menu ">
+    <div class="navbar-start">
+      <a class="navbar-item" (click)="CategoryClicked($event)" href="#">Sports</a>
+      <a class="navbar-item" (click)="CategoryClicked($event)" href="#">Health</a>
+      <a class="navbar-item" (click)="CategoryClicked($event)" href="#">Business</a>
+      <a class="navbar-item" (click)="CategoryClicked($event)" href="#">Entertainment</a>
+      <a class="navbar-item" (click)="CategoryClicked($event)" href="#">Technology</a>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+          <div class="field">
+              <p class="control has-icons-left">
+                  <input #inputVal (keydown.enter)="searchClicked()" class="input is-primary is-rounded" type="text" placeholder="Search here..." value=""/>
+                  <span (click)="searchClicked()" class="icon is-small is-left">
+                    <i  class="fas fa-search"></i>
+                  </span>
+              </p>
+          </div>
+      </div> 
+    </div>
+
+  </div>
+</nav>
